@@ -12,6 +12,7 @@ import eagle from '@/public/eagle.png';
 import aboutSection from '@/public/about-section.png';
 import keyIndicator from '@/public/key-indicator.svg';
 import stats from '@/public/stats.png';
+import leadbullDirecor from '@/public/leadbull-director.png';
 
 const k2d = K2D({ subsets: ['latin'], weight: ['400', '600'] });
 
@@ -238,7 +239,12 @@ export default function Home() {
       <section className="flex flex-col md:flex-row justify-between items-center py-14 text-center  bg-gradient-to-r-updates clip-path-sm clip-path-md clip-path-lg">
         <div className="container flex flex-col md:flex-row justify-between items-center sm:pt-16 gap-8">
           <div className="flex flex-col md:w-5/12 gap-6">
-            <Heading level={3} color="blue" className="uppercase md:text-start">
+            <Heading
+              level={3}
+              color="blue"
+              size="lg"
+              className="uppercase md:text-start"
+            >
               2024 updates
             </Heading>
             <p className="text-lg font-light leading-10 md:text-start">
@@ -252,6 +258,39 @@ export default function Home() {
             </p>
           </div>
           <UpdatesCategory />
+        </div>
+      </section>
+
+      {/* Director section */}
+
+      <section className="container flex flex-col-reverse md:flex-row justify-between items-center py-14 gap-8">
+        <div className="md:w-5/12">
+          <Image src={leadbullDirecor} alt="leadbull director" />
+        </div>
+        <div className="md:w-6/12 flex flex-col gap-6">
+          <div>
+            <Heading
+              level={3}
+              color="blue"
+              size="lg"
+              className={`uppercase text-start ${k2d.className}`}
+            >
+              WILLIAM JOHNSON
+            </Heading>
+            <Heading level={6} color="blue" className="text-start">
+              Regional Sales Director, Effective HVAC 
+            </Heading>
+          </div>
+          <p className="text-xl md:ext-2xl font-light leading-10 text-start">
+            In the end, Leadbull made sustainable improvements to our business
+            lead gen strategy. We no longer conduct any door-knocking for
+            prospecting, which frees up time for higher-value tasks. 
+          </p>
+          <p className="text-xl md:ext-2xl  font-light leading-10 text-start">
+            Leadbull all-inclusive telemarketing and digital marketing solution
+            also provided us a reliable source of high-quality leads, which
+            allowed our sales reps to accelerate their goals.
+          </p>
         </div>
       </section>
     </main>
