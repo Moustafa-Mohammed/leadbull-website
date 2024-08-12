@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const Card = ({ heading, body, variant = 'primary', className = '' }) => {
   const variantStyles = {
     gradient:
-      'bg-gradient-to-r from-[rgba(164,0,0,0.4)] to-[rgba(1,65,103,0.4)] text-white border border-[.73px] border-[#027FCA]',
+      'bg-gradient-to-r from-[rgba(164,0,0,0.2)] to-[rgba(1,65,103,0.2)] text-white border border-[.73px] border-[#027FCA]',
     primary: 'bg-card-bg border-none',
   };
   const baseStyles = 'rounded-lg p-4 lg:text-center flex flex-col gap-2 ';

@@ -8,6 +8,11 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: {
+        sm: '1rem',
+        md: '2rem',
+        lg: '3rem',
+      },
     },
     extend: {
       colors: {

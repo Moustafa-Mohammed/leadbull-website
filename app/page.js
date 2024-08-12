@@ -8,16 +8,17 @@ import VideoBackground from '@/components/VideoBackground';
 import homeLogo from '@/public/home-logo.png';
 import eagle from '@/public/eagle.png';
 import aboutSection from '@/public/about-section.png';
+import keyIndicator from '@/public/key-indicator.svg';
 
 export default function Home() {
   return (
-    <main className=" text-white relative ">
+    <main className=" text-white relative">
       <VideoBackground />
 
       <Navbar />
 
       {/* Home section */}
-      <section className="flex flex-col justify-center items-center container py-14">
+      <section className="flex flex-col justify-center items-center container py-12">
         <Image
           src={homeLogo}
           alt="home logo"
@@ -43,7 +44,7 @@ export default function Home() {
       </section>
 
       {/* About section */}
-      <section className=" flex flex-col justify-center items-center container py-14">
+      <section className=" flex flex-col justify-center items-center container py-12">
         <div className="hidden md:flex justify-center">
           <Image
             src={aboutSection}
@@ -66,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* Profile section */}
-      <section className="flex flex-col justify-center items-center container py-14">
+      <section className="flex flex-col justify-center items-center container py-12">
         <Heading level={2} color="blue" className="my-10">
           Profile
         </Heading>
@@ -100,6 +101,88 @@ export default function Home() {
             <h6 className="text-lg sm:text-xl lg:text-2xl bg-clip-text text-transparent bg-gradient-to-br from-[#FF0000] via-[#027FCA] to-[#027FCA]">
               LEADBULL LLC
             </h6>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach section */}
+      <section className="flex flex-col justify-center items-center container py-12 text-center">
+        <Heading level={2} color="blue" className="my-6">
+          OUR SOLUTION APPROACH
+        </Heading>
+        <p className="font-300 text-lg md:text-xl lg:text-2xl md:w-6/12 leading-relaxed">
+          By offering tailored telemarketing and digital marketing solutions
+          that are designed to meet the unique needs of each client, Leadbull
+          LLC Technologies is able to provide unparalleled value pushing its
+          clients to handle increased estimates.
+        </p>
+      </section>
+
+      {/* Key Indicator section */}
+      <section className="container  uppercase py-20">
+        <Heading level={2} color="blue" className="my-6 text-center">
+          <span className="block">CANADA HVAC LEADS KEY INDICATOR</span>
+          <span>(TOP SELLING)</span>
+        </Heading>
+        <div className="flex flex-col lg:flex-row justify-between gap-6">
+          <div className="flex flex-col md:flex-row lg:flex-col gap-6  lg:w-3/12 justify-between">
+            <div className="md:w-4/12 lg:w-full">
+              <Heading level={4} color="blue" className="mb-4">
+                timing
+              </Heading>
+              <li>FLEXIBLE LEADS SCHEDULES</li>
+              <li>YOU CHOOSE THE DATE & TIME</li>
+              <li>UNLIMITED LEADS — WHATEVER QUANTITY</li>
+            </div>
+            <div className="md:w-4/12 lg:w-full">
+              <Heading level={4} color="blue" className="mb-4">
+                quality
+              </Heading>
+              <li>EXCELLENT QUALITY (`A+ CLIENTS SATISFACTION)</li>
+              <li>MULTIPLE QUALITY CHOICES & TIERS</li>
+              <li>30-50% GUARANTEED MORE STIMATES IN THE FIRST 30 DAYS</li>
+            </div>
+            <div className="md:w-4/12 lg:w-full">
+              <Heading level={4} color="blue" className="mb-4 ">
+                scope
+              </Heading>
+              <li>HIGHLY CUSTOMIZED LEADS CHANNELS</li>
+              <li>DIRECT CONNECTION (LEADS X CLIENTS)</li>
+              <li>EFFICIENT PROJECT MANAGEMENT</li>
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            <Image src={keyIndicator} alt="key indicator image" />
+          </div>
+          <div className="flex flex-col md:flex-row lg:flex-col gap-6  lg:w-3/12 justify-between">
+            <div className="md:w-4/12 lg:w-full">
+              <Heading level={4} color="blue" className="mb-4">
+                cost
+              </Heading>
+              <li>BUDGET FRIENDLY</li>
+              <li>VARIOUS PAYMENT TIERS</li>
+              <li>VARIOUS PAYMENT OPTIONS</li>
+              <li>NO UPFRONT PAYMENTS</li>
+            </div>
+            <div className="md:w-4/12 lg:w-full">
+              <Heading level={4} color="blue" className="mb-4">
+                resources
+              </Heading>
+              <li>OUR TEAMS ARE OUR INVESTMENT (100+ EXPLOYEES)</li>
+              <li>5+ WORLDWIDE DATA CENTERS (UNLIMITED LEADS FUNNELS)</li>
+              <li>
+                6+ PRIVATE OWNED PROGRAMMED INTEGRATED TELEMARKETING SYSTEMS
+              </li>
+              <li>7+ LEADS TARGETING METHODS</li>
+            </div>
+            <div className="md:w-4/12 lg:w-full">
+              <Heading level={4} color="blue" className="mb-4 ">
+                environmental
+              </Heading>
+              <li>BAD LEADS RESULTS IN RE-WORK</li>
+              <li>NO DELAYED PROGRESS</li>
+              <li>DEPENDABILITY</li>
+            </div>
           </div>
         </div>
       </section>
