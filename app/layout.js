@@ -1,9 +1,9 @@
-import { Inter } from 'next/font/google';
+import { Roboto_Flex } from 'next/font/google';
 import VideoBackground from '@/components/VideoBackground';
 
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto_Flex({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'LeadBull Website',
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black`}>
+      <body className={`${roboto.className} bg-black`}>
         <VideoBackground />
         {children}
       </body>
