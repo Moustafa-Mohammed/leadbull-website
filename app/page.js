@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
 import VideoBackground from '@/components/VideoBackground';
+import UpdatesCategory from '@/components/UpdatesCategory';
 
 import homeLogo from '@/public/home-logo.png';
 import eagle from '@/public/eagle.png';
@@ -22,7 +23,7 @@ export default function Home() {
       <Navbar />
 
       {/* Home section */}
-      <section className="flex flex-col justify-center items-center container py-12">
+      <section className="flex flex-col justify-between items-center container py-12">
         <Image
           src={homeLogo}
           alt="home logo"
@@ -37,7 +38,7 @@ export default function Home() {
           className="w-1/2 md:w-1/3 lg:w-1/4"
         />
 
-        <Heading level={2} className="font-bold" color="blue">
+        <Heading level={2} color="blue" size="lg">
           Huge Updates On-The-Way
         </Heading>
         <li className="font-medium text-lg text-center">
@@ -48,7 +49,7 @@ export default function Home() {
       </section>
 
       {/* About section */}
-      <section className=" flex flex-col justify-center items-center container">
+      <section className=" flex flex-col justify-between items-center container">
         <div className="hidden md:flex justify-center">
           <Image
             src={aboutSection}
@@ -71,8 +72,8 @@ export default function Home() {
       </section>
 
       {/* Profile section */}
-      <section className="flex flex-col justify-center items-center container pt-12">
-        <Heading level={2} color="blue" className="my-10">
+      <section className="flex flex-col justify-between items-center container pt-12">
+        <Heading level={2} color="blue" size="lg" className="my-10">
           Profile
         </Heading>
         <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-10">
@@ -110,8 +111,8 @@ export default function Home() {
       </section>
 
       {/* Our Approach section */}
-      <section className="flex flex-col justify-center items-center container pt-12 text-center">
-        <Heading level={2} color="blue" className="my-6">
+      <section className="flex flex-col justify-between items-center container pt-12 text-center">
+        <Heading level={2} color="blue" size="lg" className="my-6">
           OUR SOLUTION APPROACH
         </Heading>
         <p className="font-300 text-lg md:text-xl lg:text-2xl md:w-6/12 leading-relaxed">
@@ -124,7 +125,7 @@ export default function Home() {
 
       {/* Key Indicator section */}
       <section className="container  uppercase py-20">
-        <Heading level={2} color="blue" className="my-6 text-center">
+        <Heading level={2} color="blue" size="lg" className="my-6 text-center">
           <span className="block">CANADA HVAC LEADS KEY INDICATOR</span>
           <span>(TOP SELLING)</span>
         </Heading>
@@ -193,13 +194,13 @@ export default function Home() {
 
       {/* Stats section */}
 
-      <section className="container flex justify-center py-14">
+      <section className="container flex justify-between py-14">
         <Image src={stats} alt="stats" />
       </section>
 
       {/* Revenu section */}
-      <section className="flex flex-col justify-center items-center container py-14 text-center">
-        <Heading level={2} color="blue" className="my-6">
+      <section className="flex flex-col justify-between items-center container py-14 text-center">
+        <Heading level={2} color="blue" size="lg" className="my-6">
           OVER $9 MILLION
         </Heading>
         <p className="font-300 text-lg md:text-xl lg:text-2xl md:w-6/12 leading-relaxed mb-10">
@@ -230,6 +231,27 @@ export default function Home() {
             <h6 className="font-bold text-lg md:text-2xl">75+</h6>
             <p className={`md:text-lg ${k2d.className}`}>Countries</p>
           </div>
+        </div>
+      </section>
+
+      {/* Updates section */}
+      <section className="flex flex-col md:flex-row justify-between items-center py-14 text-center  bg-gradient-to-r-updates clip-path-sm clip-path-md clip-path-lg">
+        <div className="container flex flex-col md:flex-row justify-between items-center sm:pt-16 gap-8">
+          <div className="flex flex-col md:w-5/12 gap-6">
+            <Heading level={3} color="blue" className="uppercase md:text-start">
+              2024 updates
+            </Heading>
+            <p className="text-lg font-light leading-10 md:text-start">
+              To increase our clients sales revenue and push their average
+              workflow estimates, Our company is developing.
+            </p>
+            <p className="text-lg font-light leading-10 md:text-start">
+              And will launch a wider variety of Lead-Gen models, Digital sales
+              opportunities, & and ultra targeted Telemarketing services in the
+              near future. Here’s a sneak peek at what’s in the works.
+            </p>
+          </div>
+          <UpdatesCategory />
         </div>
       </section>
     </main>
