@@ -6,18 +6,22 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    container: {
-      center: true,
-      padding: {
-        sm: '1rem',
-        md: '2rem',
-        lg: '3rem',
-      },
-    },
     extend: {
       colors: {
         'card-bg': 'rgba(45, 45, 45, 0.4)',
       },
+      container: {
+        center: true,
+        padding: '2rem',
+        screens: {
+          sm: '100%', // full width for small screens
+          md: '100%', // full width for medium screens
+          lg: '1024px', // custom width for large screens
+          xl: '1280px', // custom width for extra-large screens
+          '2xl': '1536px', // custom width for 2xl screens
+        },
+      },
+
       backgroundImage: {
         'gradient-to-r-updates':
           'linear-gradient(to right, rgba(255, 0, 0, 0.12), rgba(0, 181, 208, 0.12))',
