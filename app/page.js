@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { K2D } from 'next/font/google';
 
 import Navbar from '@/components/Navbar';
 import Heading from '@/components/Heading';
@@ -10,6 +11,8 @@ import eagle from '@/public/eagle.png';
 import aboutSection from '@/public/about-section.png';
 import keyIndicator from '@/public/key-indicator.svg';
 import stats from '@/public/stats.png';
+
+const k2d = K2D({ subsets: ['latin'], weight: ['400', '600'] });
 
 export default function Home() {
   return (
@@ -188,8 +191,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats section */}
+
       <section className="container flex justify-center py-14">
         <Image src={stats} alt="stats" />
+      </section>
+
+      {/* Revenu section */}
+      <section className="flex flex-col justify-center items-center container py-14 text-center">
+        <Heading level={2} color="blue" className="my-6">
+          OVER $9 MILLION
+        </Heading>
+        <p className="font-300 text-lg md:text-xl lg:text-2xl md:w-6/12 leading-relaxed mb-10">
+          Our services allow clients to gain a better chance of fulfilling
+          customers needs and catching their interest, Leading to higher net
+          revenue and sustained customer satisfaction and loyalty. Many top
+          global contractors <a href="#">Read more</a>
+        </p>
+        <div
+          className={`relative flex flex-col sm:flex-row items-center justify-center sm:stify-between rounded-xl py-4 px-2 bg-gradient-to-r from-[#53040B] to-[#0088D7] stats-before stats-after lg:w-8/12 ${k2d.className}`}
+        >
+          <div className="w-1/2 md:w-3/12 text-center  flex flex-col gap-6 py-4 md:py-0 sm:my-4">
+            <h6 className="font-bold text-lg md:text-2xl">75+</h6>
+            <p className={`md:text-lg ${k2d.className}`}>
+              Independent Member Firms
+            </p>
+          </div>
+          <div className="w-[2px]"></div>
+          <div className="w-1/2 md:w-3/12 text-center  flex flex-col gap-6 py-4 md:py-0 sm:my-4 separator">
+            <h6 className="font-bold text-lg md:text-2xl">35+</h6>
+            <p className={`md:text-lg ${k2d.className}`}>Contracting LLCs</p>
+          </div>
+          <div className="w-1/2 md:w-3/12 text-center  flex flex-col gap-6 py-4 md:py-0 sm:my-4 separator">
+            <h6 className="font-bold text-lg md:text-2xl">75+</h6>
+            <p className={`md:text-lg ${k2d.className}`}>Countries</p>
+          </div>
+          <div className="w-1/2 md:w-3/12 text-center  flex flex-col gap-6 py-4 md:py-0 sm:my-4 separator">
+            <h6 className="font-bold text-lg md:text-2xl">75+</h6>
+            <p className={`md:text-lg ${k2d.className}`}>Countries</p>
+          </div>
+        </div>
       </section>
     </main>
   );
