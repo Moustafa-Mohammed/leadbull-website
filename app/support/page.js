@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar from '@/components/Navbar';
 
 export default function SupportPage() {
   return (
@@ -6,5 +6,5 @@ export default function SupportPage() {
       <Navbar />
       <h1>Support Page</h1>
     </main>
-  )
+  );
 }

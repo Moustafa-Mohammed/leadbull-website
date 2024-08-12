@@ -330,15 +330,15 @@ export default function Home() {
             <Heading level="6">Contact Info</Heading>
             <ul className="flex flex-col gap-3">
               <div className="flex gap-2 items-center">
-                <Image src={location} />
+                <Image src={location} alt="location" />
                 <p>131 Continental Dr, Suite 305, Newark, DE 19713</p>
               </div>
               <div className="flex gap-2 items-center">
-                <Image src={mail} />
+                <Image src={mail} alt="mail" />
                 <p>Sales@Leadbull.net</p>
               </div>
               <div className="flex gap-2 items-center">
-                <Image src={phone} />
+                <Image src={phone} alt="phone" />
                 <p>+1 484 857 2782</p>
               </div>
             </ul>
