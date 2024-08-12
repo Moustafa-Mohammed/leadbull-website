@@ -17,7 +17,7 @@ const Heading = ({
   };
   const sizesStyles = {
     sm: ' text-lg md:text-xl lg:text-2xl',
-    lg: ' text-xl md:text-3xl lg:text-4xl',
+    lg: 'text-xl sm:text-2xl md:text-3xl lg:text-4xl',
   };
 
   const baseStyles = 'font-bold';
