@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { K2D } from 'next/font/google';
 
@@ -6,6 +7,7 @@ import Heading from '@/components/Heading';
 import Card from '@/components/Card';
 import VideoBackground from '@/components/VideoBackground';
 import UpdatesCategory from '@/components/UpdatesCategory';
+import links from '@/utils/links';
 
 import homeLogo from '@/public/home-logo.png';
 import eagle from '@/public/eagle.png';
@@ -13,6 +15,10 @@ import aboutSection from '@/public/about-section.png';
 import keyIndicator from '@/public/key-indicator.svg';
 import stats from '@/public/stats.png';
 import leadbullDirecor from '@/public/leadbull-director.png';
+import logo from '@/public/logo.svg';
+import location from '@/public/location.png';
+import mail from '@/public/mail.png';
+import phone from '@/public/phone.png';
 
 const k2d = K2D({ subsets: ['latin'], weight: ['400', '600'] });
 
@@ -293,6 +299,52 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Footer section */}
+      <footer className="container justify-between items-start grid grid-cols-1 md:grid-cols-2 gap-10 py-14">
+        <div className="flex flex-col gap-6 items-center text-center">
+          <Image src={logo} alt="logo" />
+          <p>
+            LeadX Bull stays current with the market trends aiming not only to
+            thrive But also to enhance in such a rapidly evolving digital age,
+            and to keep up its telemarketing services with the client’s
+            expectations worldwide.
+          </p>
+        </div>
+        <div className="flex justify-between gap-6">
+          <div className="flex flex-col gap-6">
+            <Heading level="6">Quick Links</Heading>
+            <ul>
+              {links.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-lg block"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-6">
+            <Heading level="6">Contact Info</Heading>
+            <ul className="flex flex-col gap-3">
+              <div className="flex gap-2 items-center">
+                <Image src={location} />
+                <p>131 Continental Dr, Suite 305, Newark, DE 19713</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image src={mail} />
+                <p>Sales@Leadbull.net</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <Image src={phone} />
+                <p>+1 484 857 2782</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
