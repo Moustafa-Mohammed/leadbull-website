@@ -9,6 +9,7 @@ import homeLogo from '@/public/home-logo.png';
 import eagle from '@/public/eagle.png';
 import aboutSection from '@/public/about-section.png';
 import keyIndicator from '@/public/key-indicator.svg';
+import stats from '@/public/stats.png';
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* About section */}
-      <section className=" flex flex-col justify-center items-center container py-12">
+      <section className=" flex flex-col justify-center items-center container">
         <div className="hidden md:flex justify-center">
           <Image
             src={aboutSection}
@@ -67,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* Profile section */}
-      <section className="flex flex-col justify-center items-center container py-12">
+      <section className="flex flex-col justify-center items-center container pt-12">
         <Heading level={2} color="blue" className="my-10">
           Profile
         </Heading>
@@ -106,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Our Approach section */}
-      <section className="flex flex-col justify-center items-center container py-12 text-center">
+      <section className="flex flex-col justify-center items-center container pt-12 text-center">
         <Heading level={2} color="blue" className="my-6">
           OUR SOLUTION APPROACH
         </Heading>
@@ -185,6 +186,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="container flex justify-center py-14">
+        <Image src={stats} alt="stats" />
       </section>
     </main>
   );
