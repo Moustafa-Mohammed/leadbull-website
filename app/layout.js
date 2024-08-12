@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'LeadBull Website',
   description: 'A frontend evaluation task for LeadBull Company',
+  icons: {
+    icon: '/logo.svg', // or '/favicon.svg' for SVG
+  },
 };
 
 export default function RootLayout({ children }) {
