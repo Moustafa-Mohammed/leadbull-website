@@ -2,13 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-.stats-after {
-  @apply after:content-[''] after:absolute after:bg-[#0d57a0] after:w-[10px] after:h-4/5 after:right-[-10px] after:rounded-tr-md  after:rounded-br-md my-auto;
-}
-.stats-before {
-  @apply before:content-[''] before:absolute before:bg-[#0d57a0] before:w-[10px] before:h-4/5 before:left-[-10px] before:rounded-tl-md  before:rounded-bl-md;
-}
+@layer components {
+  .clip-path-sm {
+    @apply sm:clip-path-polygon;
+  }
 
-.separator {
-  @apply border-t-2 sm:border-t-0 border-t-[#027FCA] sm:border-l-2 border-l-[#027FCA];
+  .clip-path-polygon {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .clip-path-md {
+    @apply md:clip-path-polygon;
+  }
+
+  .clip-path-polygon {
+    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .clip-path-lg {
+    @apply lg:clip-path-polygon;
+  }
+
+  .clip-path-polygon {
+    clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .stats-after {
+    @apply after:content-[''] after:absolute after:bg-[#0d57a0] after:w-[10px] after:h-4/5 after:right-[-10px] after:rounded-tr-md  after:rounded-br-md my-auto;
+  }
+  .stats-before {
+    @apply before:content-[''] before:absolute before:bg-[#0d57a0] before:w-[10px] before:h-4/5 before:left-[-10px] before:rounded-tl-md  before:rounded-bl-md;
+  }
+
+  .separator {
+    @apply border-t-2 sm:border-t-0 border-t-[#027FCA] sm:border-l-2 border-l-[#027FCA];
+  }
 }
