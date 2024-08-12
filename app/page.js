@@ -1,3 +1,9 @@
+import Navbar from '@/components/Navbar';
+
 export default function Home() {
-  return <main>Initial setup</main>;
+  return (
+    <main className=" text-white relative ">
+      <Navbar />
+    </main>
+  );
 }
