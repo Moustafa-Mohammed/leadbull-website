@@ -1,5 +1,4 @@
 import { Roboto_Flex } from 'next/font/google';
-import VideoBackground from '@/components/VideoBackground';
 
 import './globals.css';
 
@@ -16,10 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-black`}>
-        <VideoBackground />
-        {children}
-      </body>
+      <body className={`${roboto.className} bg-black`}>{children}</body>
     </html>
   );
 }
