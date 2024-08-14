@@ -19,10 +19,10 @@ const NavMenu = ({ isOpen, links }) => {
       {/* Mobile buttons */}
       {isOpen && (
         <div className="flex gap-4 items-center mt-4 md:hidden">
-          <Button variant="primary" className="mb-2">
+          <Button color="gradient">
             <IoMdLogIn className="w-8 h-8 " />
           </Button>
-          <Button variant="primary">
+          <Button color="gradient">
             <MdDateRange className="w-8 h-8" />
           </Button>
         </div>

@@ -2,22 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Button = ({
-  children,
-  type = 'button',
-  onClick,
-  variant = 'primary',
-  size = 'sm',
-  disabled = false,
-  className,
-}) => {
+const Button = ({ children, color, size = 'sm', className, ...props }) => {
   const baseStyles =
-    'inline-flex   items-center justify-center font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-500';
+    'inline-flex items-center justify-center font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300 hover:scale-105';
 
-  const variantStyles = {
-    primary:
-      'bg-gradient-to-r from-[#53040B] to-[#0088D7] text-white hover:bg-none focus:ring-blue-500',
-    secondary:
+  const colorStyles = {
+    gradient:
+      'bg-gradient-to-r from-[#53040B] to-[#0088D7] text-white  focus:ring-blue-500',
+    transparent:
       'bg-transparent text-white hover:bg-gradient-to-r from-[#53040B] to-[#0088D7] focus:ring-blue-500',
   };
 
@@ -28,19 +20,14 @@ const Button = ({
 
   const combinedStyles = classNames(
     baseStyles,
-    variantStyles[variant],
+    colorStyles[color],
     sizeStyles[size],
     className,
-    { 'opacity-50 cursor-not-allowed': disabled }
+    { 'opacity-50 cursor-not-allowed': props.disabled }
   );
 
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={combinedStyles}
-      disabled={disabled}
-    >
+    <button {...props} className={combinedStyles}>
       {children}
     </button>
   );
@@ -48,11 +35,8 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  onClick: PropTypes.func,
   variant: PropTypes.oneOf(['primary', 'secondary', 'danger']),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  disabled: PropTypes.bool,
   className: PropTypes.string,
 };
 
