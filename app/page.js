@@ -19,6 +19,7 @@ import logo from '@/public/logo.svg';
 import location from '@/public/location.png';
 import mail from '@/public/mail.png';
 import phone from '@/public/phone.png';
+import StackedSquares from '@/components/StackedSquares';
 
 const k2d = K2D({ subsets: ['latin'], weight: ['400', '600'] });
 
@@ -128,6 +129,10 @@ export default function Home() {
           LLC Technologies is able to provide unparalleled value pushing its
           clients to handle increased estimates.
         </p>
+
+        <div className="container flex justify-between mt-20 px-14 lg:px-28">
+          <StackedSquares />
+        </div>
       </section>
 
       {/* Key Indicator section */}

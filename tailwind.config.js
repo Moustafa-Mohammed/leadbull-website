@@ -25,6 +25,8 @@ module.exports = {
       backgroundImage: {
         'gradient-to-r-updates':
           'linear-gradient(to right, rgba(255, 0, 0, 0.12), rgba(0, 181, 208, 0.12))',
+        'gradient-to-r-square':
+          'linear-gradient(180deg, rgba(59, 54, 86, 1) 0%, rgba(39, 63, 101, 1) 50%, rgba(21, 73, 116, 1) 100%)',
       },
       opacity: {
         40: '.40',
