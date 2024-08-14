@@ -1,6 +1,6 @@
 # Leadbull Website
 
-Welcome to the Leadbull Website repository. This project is a web-based application designed to [briefly describe the purpose of the website, e.g., "provide marketing services, lead generation solutions, etc."].
+Welcome to the Leadbull Website repository. This project is a website task to be submitted to the LeadBull comapny as part of onboarding process for a Frontend Developer position.
 
 ## Table of Contents
 
