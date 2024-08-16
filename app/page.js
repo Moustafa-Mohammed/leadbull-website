@@ -130,7 +130,7 @@ export default function Home() {
           clients to handle increased estimates.
         </p>
 
-        <div className="container flex justify-between mt-20 px-14 lg:px-28">
+        <div className="container flex justify-between mt-20 px-16 md:px-20 lg:px-28">
           <StackedSquares />
         </div>
       </section>

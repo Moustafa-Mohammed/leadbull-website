@@ -2,7 +2,7 @@ const GradientSquare = ({ className = '', children }) => {
   return (
     <div className={`relative -rotate-45  ${className}`}>
       <div
-        className={` w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gradient-to-r-square rounded-md grid place-content-center shadow-lg`}
+        className={` w-[4.75rem] h-[4.75rem] sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-gradient-to-r-square rounded-md grid place-content-center shadow-lg`}
       >
         <h6 className="text-white text-xs font-medium rotate-45 text-center">
           {children}
